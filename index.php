@@ -1,3 +1,6 @@
+<?php
+header("Location: http://198.7.63.44/decisionesAG/components/forms/wizard/wizard-1.html");
+?>
 <!DOCTYPE html>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 4
