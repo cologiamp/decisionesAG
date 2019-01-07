@@ -39,7 +39,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<link href="../../../assets/vendors/base/vendors.bundle.css" rel="stylesheet" type="text/css" />
 		<link href="../../../assets/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
 		<!--end::Base Styles -->
-		<link rel="shortcut icon" href="../../../assets/demo/default/media/img/logo/favicon.ico" />
+		<link rel="shortcut icon" href="../../../assets/demo/default/media/img/logo/favicon.png" />
 	</head>
 	<!-- end::Head -->
     <!-- end::Body -->
@@ -152,7 +152,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																	</span>
 																</li>
 																<li class="m-nav__item">
-																	<a href="" class="m-nav__link">
+																	<a href="#" class="m-nav__link">
 																		<i class="m-nav__link-icon flaticon-profile-1"></i>
 																		<span class="m-nav__link-title">
 																			<span class="m-nav__link-wrap">
@@ -193,12 +193,14 @@ License: You must have a valid license purchased only from themeforest(the above
 																		</span>
 																	</a>
 																</li>
+																<!--
 																<li class="m-nav__separator m-nav__separator--fit"></li>
 																<li class="m-nav__item">
-																	<a href="" class="btn m-btn--pill    btn-secondary m-btn m-btn--custom m-btn--label-brand m-btn--bolder">
+																	<a href="#" class="btn m-btn--pill    btn-secondary m-btn m-btn--custom m-btn--label-brand m-btn--bolder">
 																		Cerrar sesión
 																	</a>
 																</li>
+																-->
 															</ul>
 														</div>
 													</div>
@@ -504,19 +506,28 @@ License: You must have a valid license purchased only from themeforest(the above
 																						<label class="form-control-label">
 																							* Tipo de variable?
 																						</label>
-																				
-																						<input id="variable1tipo" name="variable1tipo" data-switch="true" type="checkbox" data-on-text="Continua" data-handle-width="70" data-off-text="Discreta" data-on-color="brand" >		
+																						
+																						<input id="variable1tipo" name="variable1tipo" data-switch="true" type="checkbox" data-on-text="Continua" data-handle-width="70" data-off-text="Discreta" data-on-color="brand" >
+
 																					</div>
 																					<div class="d-md-none m--margin-bottom-10"></div>
 																				</div>
 																				<div class="col-md-2">
+																					<!--
 																					<div class="m-form__group m-form__group--inline">
 																						<label class="form-control-label">
 																							Rango (Min-Max):
 																						</label>
 
-																						<input type="text" id="variable1rango" name="variable1rango" class="form-control m-input" placeholder="Min-Max" value="Min-Max" aria-describedby=" -error" aria-invalid="false">
+																						<input type="text" class="form-control m-input" id="variable1rango" name="variable1rango" placeholder="" vaLue="min-max" arIa-describedby="billing_city-error" aria-invalid="false">
 																					</div>
+																					-->
+																					<div class="m-form__group m-form__group--inline">
+																						<label class="form-control-label">
+																							Rango (Min-Max):
+																						</label>
+																						<input type="text" class="form-control m-input" id="variable1rango" name="variable1rango" placeholder="" value="Min-Max" aria-describedby="billing_city-error" aria-invalid="false">
+																					</div>																					
 																					<div class="d-md-none m--margin-bottom-10"></div>
 																				</div>
 																				<div class="col-md-2">
@@ -524,10 +535,8 @@ License: You must have a valid license purchased only from themeforest(the above
 																						<label class="form-control-label">
 																							Saltos Rango:
 																						</label>
+																						<input id="variable1saltos" type="text" value="00" name="demo1">
 
-																						<div class="m-bootstrap-touchspin-brand">
-																							<div class="input-group bootstrap-touchspin"><span class="input-group-addon bootstrap-touchspin-prefix" style="display: none;"></span><input id="m_touchspin_2_1" type="text" class="form-control" value="00" name="variable1saltos" placeholder="Select time" style="display: block;"><span class="input-group-addon bootstrap-touchspin-postfix" style="display: none;"></span></div>
-																						</div>
 																					</div>
 																					<div class="d-md-none m--margin-bottom-10"></div>
 																				</div>	
@@ -549,12 +558,12 @@ License: You must have a valid license purchased only from themeforest(the above
 																					<label class="form-control-label">
 																							Opciones:
 																					</label>
-																					<div class="btn-sm btn btn-danger m-btn m-btn--icon m-btn--pill">
+																					<div onclick="borrar('1');" class="btn-sm btn btn-danger m-btn m-btn--icon m-btn--pill">
 
 																						
 																						<span>
 																							<i class="la la-trash-o"></i>
-																							<span onclick="borrar('1');">
+																							<span>
 																								Borrar
 																							</span>
 																						</span>
@@ -592,7 +601,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																							Rango:
 																						</label>
 
-																						<input type="text" class="form-control m-input" id="variable2rango" name="variable2rango" placeholder="" value="" aria-describedby=" -error" aria-invalid="false">
+																						<input type="text" class="form-control m-input" id="variable2rango" name="variable2rango" placeholder="" value="">
 																					</div>
 																					<div class="d-md-none m--margin-bottom-10"></div>
 																				</div>
@@ -601,10 +610,8 @@ License: You must have a valid license purchased only from themeforest(the above
 																						<label class="form-control-label">
 																							Saltos Rango:
 																						</label>
+																						<input id="variable2saltos" type="text" value="00" name="demo2">
 
-																						<div class="m-bootstrap-touchspin-brand">
-																							<div class="input-group bootstrap-touchspin"><span class="input-group-addon bootstrap-touchspin-prefix" style="display: none;"></span><input id="m_touchspin_2_1" type="text" class="form-control" value="00" name="variable2saltos" placeholder="Select time" style="display: block;"><span class="input-group-addon bootstrap-touchspin-postfix" style="display: none;"></span></div>
-																						</div>
 																					</div>
 																					<div class="d-md-none m--margin-bottom-10"></div>
 																				</div>	
@@ -616,7 +623,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																						</label>
 
 																						<div id="cp2" class="input-group colorpicker-component">
-																						    <input id="variable2color" name="variable2color" type="hidden" value="#00AABB" class="form-control" />
+																						    <input id="variable2color" name="variable2color" type="hidden" value="#FF2121" class="form-control" />
 																						    <span class="input-group-addon"><i style="width: 45px; height: 36px"></i></span>
 																						</div>																						
 																					</div>
@@ -626,12 +633,12 @@ License: You must have a valid license purchased only from themeforest(the above
 																					<label class="form-control-label">
 																							Opciones:
 																					</label>
-																					<div class="btn-sm btn btn-danger m-btn m-btn--icon m-btn--pill">
+																					<div onclick="borrar('2');" class="btn-sm btn btn-danger m-btn m-btn--icon m-btn--pill">
 
 																						
 																						<span>
 																							<i class="la la-trash-o"></i>
-																							<span onclick="borrar('2');">
+																							<span>
 																								Borrar
 																							</span>
 																						</span>
@@ -670,7 +677,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																							Rango:
 																						</label>
 
-																						<input type="text" class="form-control m-input" id="variable3rango" name="variable3rango" placeholder="" value="" aria-describedby=" -error" aria-invalid="false">
+																						<input type="text" class="form-control m-input" id="variable3rango" name="variable3rango" placeholder="" value="">
 																					</div>
 																					<div class="d-md-none m--margin-bottom-10"></div>
 																				</div>
@@ -679,10 +686,8 @@ License: You must have a valid license purchased only from themeforest(the above
 																						<label class="form-control-label">
 																							Saltos Rango:
 																						</label>
+																						<input id="variable3saltos" type="text" value="00" name="demo3">
 
-																						<div class="m-bootstrap-touchspin-brand">
-																							<div class="input-group bootstrap-touchspin"><span class="input-group-addon bootstrap-touchspin-prefix" style="display: none;"></span><input id="m_touchspin_2_1" type="text" class="form-control" value="00" name="variable3saltos" placeholder="Select time" style="display: block;"><span class="input-group-addon bootstrap-touchspin-postfix" style="display: none;"></span></div>
-																						</div>
 																					</div>
 																					<div class="d-md-none m--margin-bottom-10"></div>
 																				</div>	
@@ -694,7 +699,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																						</label>
 
 																						<div id="cp3" class="input-group colorpicker-component">
-																						    <input id="variable3color" name="variable3color" type="hidden" value="#00AABB" class="form-control" />
+																						    <input id="variable3color" name="variable3color" type="hidden" value="#2146FF" class="form-control" />
 																						    <span class="input-group-addon"><i style="width: 45px; height: 36px"></i></span>
 																						</div>																						
 																					</div>
@@ -704,12 +709,12 @@ License: You must have a valid license purchased only from themeforest(the above
 																					<label class="form-control-label">
 																							Opciones:
 																					</label>
-																					<div class="btn-sm btn btn-danger m-btn m-btn--icon m-btn--pill">
+																					<div onclick="borrar('3');" class="btn-sm btn btn-danger m-btn m-btn--icon m-btn--pill">
 
 																						
 																						<span>
 																							<i class="la la-trash-o"></i>
-																							<span onclick="borrar('3');">
+																							<span>
 																								Borrar
 																							</span>
 																						</span>
@@ -747,7 +752,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																							Rango:
 																						</label>
 
-																						<input type="text" class="form-control m-input" id="variable4rango" name="variable4rango" placeholder="" value="" aria-describedby=" -error" aria-invalid="false">
+																						<input type="text" class="form-control m-input" id="variable4rango" name="variable4rango" placeholder="" value="">
 																					</div>
 																					<div class="d-md-none m--margin-bottom-10"></div>
 																				</div>
@@ -756,10 +761,8 @@ License: You must have a valid license purchased only from themeforest(the above
 																						<label class="form-control-label">
 																							Saltos Rango:
 																						</label>
+																						<input id="variable4saltos" type="text" value="00" name="demo4">
 
-																						<div class="m-bootstrap-touchspin-brand">
-																							<div class="input-group bootstrap-touchspin"><span class="input-group-addon bootstrap-touchspin-prefix" style="display: none;"></span><input id="m_touchspin_2_1" type="text" class="form-control" value="00" name="variable4saltos" placeholder="Select time" style="display: block;"><span class="input-group-addon bootstrap-touchspin-postfix" style="display: none;"></span></div>
-																						</div>
 																					</div>
 																					<div class="d-md-none m--margin-bottom-10"></div>
 																				</div>	
@@ -771,7 +774,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																						</label>
 
 																						<div id="cp4" class="input-group colorpicker-component">
-																						    <input id="variable4color" name="variable4color" type="hidden" value="#00AABB" class="form-control" />
+																						    <input id="variable4color" name="variable4color" type="hidden" value="#2D9B00" class="form-control" />
 																						    <span class="input-group-addon"><i style="width: 45px; height: 36px"></i></span>
 																						</div>																						
 																					</div>
@@ -781,12 +784,12 @@ License: You must have a valid license purchased only from themeforest(the above
 																					<label class="form-control-label">
 																							Opciones:
 																					</label>
-																					<div class="btn-sm btn btn-danger m-btn m-btn--icon m-btn--pill">
+																					<div onclick="borrar('4');" class="btn-sm btn btn-danger m-btn m-btn--icon m-btn--pill">
 
 																						
 																						<span>
 																							<i class="la la-trash-o"></i>
-																							<span onclick="borrar('4');">
+																							<span>
 																								Borrar
 																							</span>
 																						</span>
@@ -824,7 +827,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																							Rango:
 																						</label>
 
-																						<input type="text" class="form-control m-input" id="variable5rango" name="variable5rango" placeholder="" value="" aria-describedby=" -error" aria-invalid="false">
+																						<input type="text" class="form-control m-input" id="variable5rango" name="variable5rango" placeholder="" value="">
 																					</div>
 																					<div class="d-md-none m--margin-bottom-10"></div>
 																				</div>
@@ -833,13 +836,11 @@ License: You must have a valid license purchased only from themeforest(the above
 																						<label class="form-control-label">
 																							Saltos Rango:
 																						</label>
+																						<input id="variable5saltos" type="text" value="00" name="demo5">
 
-																						<div class="m-bootstrap-touchspin-brand">
-																							<div class="input-group bootstrap-touchspin"><span class="input-group-addon bootstrap-touchspin-prefix" style="display: none;"></span><input id="m_touchspin_2_1" type="text" class="form-control" value="00" name="variable5saltos" placeholder="Select time" style="display: block;"><span class="input-group-addon bootstrap-touchspin-postfix" style="display: none;"></span></div>
-																						</div>
 																					</div>
 																					<div class="d-md-none m--margin-bottom-10"></div>
-																				</div>	
+																				</div>		
 
 																				<div class="col-md-2">
 																					<div class="m-form__group m-form__group--inline">
@@ -848,7 +849,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																						</label>
 
 																						<div id="cp5" class="input-group colorpicker-component">
-																						    <input id="variable5color" name="variable5color" type="hidden" value="#00AABB" class="form-control" />
+																						    <input id="variable5color" name="variable5color" type="hidden" value="#FFFB00" class="form-control" />
 																						    <span class="input-group-addon"><i style="width: 45px; height: 36px"></i></span>
 																						</div>																						
 																					</div>
@@ -858,12 +859,12 @@ License: You must have a valid license purchased only from themeforest(the above
 																					<label class="form-control-label">
 																							Opciones:
 																					</label>
-																					<div class="btn-sm btn btn-danger m-btn m-btn--icon m-btn--pill">
+																					<div onclick="borrar('5');" class="btn-sm btn btn-danger m-btn m-btn--icon m-btn--pill">
 
 																						
 																						<span>
 																							<i class="la la-trash-o"></i>
-																							<span onclick="borrar('5');">
+																							<span>
 																								Borrar
 																							</span>
 																						</span>
@@ -902,7 +903,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																							Rango:
 																						</label>
 
-																						<input type="text" class="form-control m-input" id="variable6nombre" name="variable6nombre" placeholder="" value="" aria-describedby=" -error" aria-invalid="false">
+																						<input type="text" class="form-control m-input" id="variable6rango" name="variable6rango" placeholder="" value="" aria-describedby=" -error" aria-invalid="false">
 																					</div>
 																					<div class="d-md-none m--margin-bottom-10"></div>
 																				</div>
@@ -911,10 +912,8 @@ License: You must have a valid license purchased only from themeforest(the above
 																						<label class="form-control-label">
 																							Saltos Rango:
 																						</label>
+																						<input id="variable6saltos" type="text" value="00" name="demo6">
 
-																						<div class="m-bootstrap-touchspin-brand">
-																							<div class="input-group bootstrap-touchspin"><span class="input-group-addon bootstrap-touchspin-prefix" style="display: none;"></span><input id="m_touchspin_2_1" type="text" class="form-control" value="00" name="variable6saltos" placeholder="Select time" style="display: block;"><span class="input-group-addon bootstrap-touchspin-postfix" style="display: none;"></span></div>
-																						</div>
 																					</div>
 																					<div class="d-md-none m--margin-bottom-10"></div>
 																				</div>	
@@ -926,7 +925,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																						</label>
 
 																						<div id="cp6" class="input-group colorpicker-component">
-																						    <input id="variable6color" name="variable6color" type="hidden" value="#00AABB" class="form-control" />
+																						    <input id="variable6color" name="variable6color" type="hidden" value="#DC0064" class="form-control" />
 																						    <span class="input-group-addon"><i style="width: 45px; height: 36px"></i></span>
 																						</div>																						
 																					</div>
@@ -936,12 +935,12 @@ License: You must have a valid license purchased only from themeforest(the above
 																					<label class="form-control-label">
 																							Opciones:
 																					</label>
-																					<div class="btn-sm btn btn-danger m-btn m-btn--icon m-btn--pill">
+																					<div onclick="borrar('6');" class="btn-sm btn btn-danger m-btn m-btn--icon m-btn--pill">
 
 																						
 																						<span>
 																							<i class="la la-trash-o"></i>
-																							<span onclick="borrar('6');">
+																							<span>
 																								Borrar
 																							</span>
 																						</span>
@@ -979,7 +978,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																							Rango:
 																						</label>
 
-																						<input type="text" class="form-control m-input" id="variable7rango" name="variable7rango" placeholder="" value="" aria-describedby=" -error" aria-invalid="false">
+																						<input type="text" class="form-control m-input" id="variable7rango" name="variable7rango" placeholder="" value="">
 																					</div>
 																					<div class="d-md-none m--margin-bottom-10"></div>
 																				</div>
@@ -988,13 +987,11 @@ License: You must have a valid license purchased only from themeforest(the above
 																						<label class="form-control-label">
 																							Saltos Rango:
 																						</label>
+																						<input id="variable7saltos" type="text" value="00" name="demo7">
 
-																						<div class="m-bootstrap-touchspin-brand">
-																							<div class="input-group bootstrap-touchspin"><span class="input-group-addon bootstrap-touchspin-prefix" style="display: none;"></span><input id="m_touchspin_2_1" type="text" class="form-control" value="00" name="variable7saltos" placeholder="Select time" style="display: block;"><span class="input-group-addon bootstrap-touchspin-postfix" style="display: none;"></span></div>
-																						</div>
 																					</div>
 																					<div class="d-md-none m--margin-bottom-10"></div>
-																				</div>	
+																				</div>		
 
 																				<div class="col-md-2">
 																					<div class="m-form__group m-form__group--inline">
@@ -1003,7 +1000,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																						</label>
 
 																						<div id="cp7" class="input-group colorpicker-component">
-																						    <input id="variable7color" name="variable7color" type="hidden" value="#00AABB" class="form-control" />
+																						    <input id="variable7color" name="variable7color" type="hidden" value="#8BBD7E" class="form-control" />
 																						    <span class="input-group-addon"><i style="width: 45px; height: 36px"></i></span>
 																						</div>																						
 																					</div>
@@ -1013,12 +1010,12 @@ License: You must have a valid license purchased only from themeforest(the above
 																					<label class="form-control-label">
 																							Opciones:
 																					</label>
-																					<div class="btn-sm btn btn-danger m-btn m-btn--icon m-btn--pill">
+																					<div onclick="borrar('7');" class="btn-sm btn btn-danger m-btn m-btn--icon m-btn--pill">
 
 																						
 																						<span>
 																							<i class="la la-trash-o"></i>
-																							<span onclick="borrar('7');">
+																							<span>
 																								Borrar
 																							</span>
 																						</span>
@@ -1056,7 +1053,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																							Rango:
 																						</label>
 
-																						<input type="text" class="form-control m-input" id="variable8rango" name="variable8rango" placeholder="" value="" aria-describedby=" -error" aria-invalid="false">
+																						<input type="text" class="form-control m-input" id="variable8rango" name="variable8rango" placeholder="" value="">
 																					</div>
 																					<div class="d-md-none m--margin-bottom-10"></div>
 																				</div>
@@ -1065,13 +1062,11 @@ License: You must have a valid license purchased only from themeforest(the above
 																						<label class="form-control-label">
 																							Saltos Rango:
 																						</label>
+																						<input id="variable8saltos" type="text" value="00" name="demo8">
 
-																						<div class="m-bootstrap-touchspin-brand">
-																							<div class="input-group bootstrap-touchspin"><span class="input-group-addon bootstrap-touchspin-prefix" style="display: none;"></span><input id="m_touchspin_2_1" type="text" class="form-control" value="00" name="variable8saltos" placeholder="Select time" style="display: block;"><span class="input-group-addon bootstrap-touchspin-postfix" style="display: none;"></span></div>
-																						</div>
 																					</div>
 																					<div class="d-md-none m--margin-bottom-10"></div>
-																				</div>	
+																				</div>		
 
 																				<div class="col-md-2">
 																					<div class="m-form__group m-form__group--inline">
@@ -1080,7 +1075,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																						</label>
 
 																						<div id="cp8" class="input-group colorpicker-component">
-																						    <input id="variable8color" name="variable8color" type="hidden" value="#00AABB" class="form-control" />
+																						    <input id="variable8color" name="variable8color" type="hidden" value="#FE8709" class="form-control" />
 																						    <span class="input-group-addon"><i style="width: 45px; height: 36px"></i></span>
 																						</div>																						
 																					</div>
@@ -1090,12 +1085,12 @@ License: You must have a valid license purchased only from themeforest(the above
 																					<label class="form-control-label">
 																							Opciones:
 																					</label>
-																					<div class="btn-sm btn btn-danger m-btn m-btn--icon m-btn--pill">
+																					<div onclick="borrar('8');" class="btn-sm btn btn-danger m-btn m-btn--icon m-btn--pill">
 
 																						
 																						<span>
 																							<i class="la la-trash-o"></i>
-																							<span onclick="borrar('8');">
+																							<span>
 																								Borrar
 																							</span>
 																						</span>
@@ -1134,7 +1129,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																							Rango:
 																						</label>
 
-																						<input type="text" class="form-control m-input" id="variable9rango" name="variable9rango" placeholder="" value="" aria-describedby=" -error" aria-invalid="false">
+																						<input type="text" class="form-control m-input" id="variable9rango" name="variable9rango" placeholder="" value="">
 																					</div>
 																					<div class="d-md-none m--margin-bottom-10"></div>
 																				</div>
@@ -1143,13 +1138,11 @@ License: You must have a valid license purchased only from themeforest(the above
 																						<label class="form-control-label">
 																							Saltos Rango:
 																						</label>
+																						<input id="variable9saltos" type="text" value="00" name="demo9">
 
-																						<div class="m-bootstrap-touchspin-brand">
-																							<div class="input-group bootstrap-touchspin"><span class="input-group-addon bootstrap-touchspin-prefix" style="display: none;"></span><input id="m_touchspin_2_1" type="text" class="form-control" value="00" name="variable9saltos" placeholder="Select time" style="display: block;"><span class="input-group-addon bootstrap-touchspin-postfix" style="display: none;"></span></div>
-																						</div>
 																					</div>
 																					<div class="d-md-none m--margin-bottom-10"></div>
-																				</div>	
+																				</div>		
 
 																				<div class="col-md-2">
 																					<div class="m-form__group m-form__group--inline">
@@ -1158,7 +1151,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																						</label>
 
 																						<div id="cp9" class="input-group colorpicker-component">
-																						    <input id="variable9color" name="variable9color" type="hidden" value="#00AABB" class="form-control" />
+																						    <input id="variable9color" name="variable9color" type="hidden" value="#7F2A2A" class="form-control" />
 																						    <span class="input-group-addon"><i style="width: 45px; height: 36px"></i></span>
 																						</div>																						
 																					</div>
@@ -1168,12 +1161,12 @@ License: You must have a valid license purchased only from themeforest(the above
 																					<label class="form-control-label">
 																							Opciones:
 																					</label>
-																					<div class="btn-sm btn btn-danger m-btn m-btn--icon m-btn--pill">
+																					<div onclick="borrar('9');" class="btn-sm btn btn-danger m-btn m-btn--icon m-btn--pill">
 
 																						
 																						<span>
 																							<i class="la la-trash-o"></i>
-																							<span onclick="borrar('9');">
+																							<span>
 																								Borrar
 																							</span>
 																						</span>
@@ -1211,7 +1204,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																							Rango:
 																						</label>
 
-																						<input type="text" class="form-control m-input" id="variable10rango" name="variable10rango" placeholder="" value="" aria-describedby=" -error" aria-invalid="false">
+																						<input type="text" class="form-control m-input" id="variable10rango" name="variable10rango" placeholder="" value="">
 																					</div>
 																					<div class="d-md-none m--margin-bottom-10"></div>
 																				</div>
@@ -1220,13 +1213,11 @@ License: You must have a valid license purchased only from themeforest(the above
 																						<label class="form-control-label">
 																							Saltos Rango:
 																						</label>
+																						<input id="variable10saltos" type="text" value="00" name="demo10">
 
-																						<div class="m-bootstrap-touchspin-brand">
-																							<div class="input-group bootstrap-touchspin"><span class="input-group-addon bootstrap-touchspin-prefix" style="display: none;"></span><input id="m_touchspin_2_1" type="text" class="form-control" value="00" name="variable10saltos" placeholder="Select time" style="display: block;"><span class="input-group-addon bootstrap-touchspin-postfix" style="display: none;"></span></div>
-																						</div>
 																					</div>
 																					<div class="d-md-none m--margin-bottom-10"></div>
-																				</div>	
+																				</div>		
 
 																				<div class="col-md-2">
 																					<div class="m-form__group m-form__group--inline">
@@ -1235,7 +1226,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																						</label>
 
 																						<div id="cp10" class="input-group colorpicker-component">
-																						    <input id="variable10color" name="variable10color" type="hidden" value="#00AABB" class="form-control" />
+																						    <input id="variable10color" name="variable10color" type="hidden" value="#888888" class="form-control" />
 																						    <span class="input-group-addon"><i style="width: 45px; height: 36px"></i></span>
 																						</div>																						
 																					</div>
@@ -1245,12 +1236,12 @@ License: You must have a valid license purchased only from themeforest(the above
 																					<label class="form-control-label">
 																							Opciones:
 																					</label>
-																					<div class="btn-sm btn btn-danger m-btn m-btn--icon m-btn--pill">
+																					<div onclick="borrar('10');" class="btn-sm btn btn-danger m-btn m-btn--icon m-btn--pill">
 
 																						
 																						<span>
 																							<i class="la la-trash-o"></i>
-																							<span onclick="borrar('10');">
+																							<span>
 																								Borrar
 																							</span>
 																						</span>
@@ -1266,10 +1257,10 @@ License: You must have a valid license purchased only from themeforest(the above
 																	<div class="m-form__group form-group row">
 																		<label class="col-lg-2 col-form-label"></label>
 																		<div class="col-lg-2 offset-lg-10">
-																			<div data-repeater-create="" class="btn btn btn-sm btn-brand m-btn m-btn--icon m-btn--pill m-btn--wide">
+																			<div onclick="agregar();" data-repeater-create="" class="btn btn btn-sm btn-brand m-btn m-btn--icon m-btn--pill m-btn--wide">
 																				<span>
 																					<i class="la la-plus"></i>
-																					<span onclick="agregar();">
+																					<span>
 																						Agregar
 																					</span>
 																				</span>
@@ -1302,7 +1293,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																			</label>
 																			<select onchange="contenidoConfirmacion(this)" class="form-control m-input" id="cantidadIslas" name="billing_card_exp_month">
 																				<option value="">
-																					Select
+																					Seleccionar
 																				</option>
 																				<option value="01">
 																					01
@@ -1341,7 +1332,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																			<label class="form-control-label">
 																				Cantidad de iteraciones maximas:
 																			</label>
-																			<input type="number" onchange="contenidoConfirmacion(this)" id="cantidadIteraciones" class="form-control m-input" name="billing_card_cvv" placeholder="" value="200">
+																			<input type="number" onchange="contenidoConfirmacion(this)" id="cantidadIteraciones" class="form-control m-input" name="billing_card_cvv" placeholder="" value="100">
 																		</div>
 																	</div>
 																</div>
@@ -1350,7 +1341,8 @@ License: You must have a valid license purchased only from themeforest(the above
 																	<div class="m-form__heading">
 																		<h3 class="m-form__heading-title">
 																			Criterios de aceptacion
-																			<i data-toggle="m-tooltip" data-width="auto" class="m-form__heading-help-icon flaticon-info" title="Los criterios de aceptacion sirven para facilitar la solucion o bla bla bla"></i>
+																			<i data-toggle="m-tooltip" data-width="auto" class="m-form__heading-help-icon flaticon-info" title="Los criterios de aceptacion sirven para.............................
+																			"></i>
 																		</h3>
 																	</div>
 
@@ -1382,7 +1374,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																	<div class="m-form__heading">
 																		<h3 class="m-form__heading-title">
 																			Funcion de Fitness
-																			<i data-toggle="m-tooltip" data-width="auto" class="m-form__heading-help-icon flaticon-info" title="Explicacion de funcion fitness"></i>
+																			<i data-toggle="m-tooltip" data-width="auto" class="m-form__heading-help-icon flaticon-info" title="..................Explicacion de funcion fitness................"></i>
 																		</h3>
 																	</div>
 
@@ -1411,7 +1403,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																				<label class="m-option">
 																					<span class="m-option__control">
 																						<span class="m-radio m-radio--state-brand">
-																							<input type="radio" name="billing_delivery" value="">
+																							<input onchange="contenidoConfirmacion(this)" type="radio" id="tipoSolucion" name="tipoSolucion" value="Solución Rápida">
 																							<span></span>
 																						</span>
 																					</span>
@@ -1434,7 +1426,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																				<label class="m-option">
 																					<span class="m-option__control">
 																						<span class="m-radio m-radio--state-brand">
-																							<input type="radio" name="billing_delivery" value="">
+																							<input onchange="contenidoConfirmacion(this)" type="radio" id="tipoSolucion" name="tipoSolucion" checked value="Solución Estandar">
 																							<span></span>
 																						</span>
 																					</span>
@@ -1521,7 +1513,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																		<div class="m-accordion__item-body collapse" id="m_accordion_1_item_2_body" class=" " role="tabpanel" aria-labelledby="m_accordion_1_item_2_head" data-parent="#m_accordion_1">
 																			<!--begin::Content-->
 																			<div class="tab-content  m--padding-30">
-																				<div class="m-form__section m-form__section--first">
+																				<div id="detalle-variables" class="m-form__section m-form__section--first">
 																					<div class="m-form__heading">
 																						<h4 class="m-form__heading-title">
 																							Detalle de variables
@@ -1534,26 +1526,6 @@ License: You must have a valid license purchased only from themeforest(the above
 																						<div class="col-xl-8 col-lg-8">
 																							<span class="m-form__control-static">
 																								Altura, Discreta, (1.50-2.00) m, Saltos: 0.01, Color: Azul
-																							</span>
-																						</div>
-																					</div>
-																					<div class="form-group m-form__group m-form__group--sm row">
-																						<label class="col-xl-4 col-lg-4 col-form-label">
-																							Variable 2:
-																						</label>
-																						<div class="col-xl-8 col-lg-8">
-																							<span class="m-form__control-static">
-																								Peso, Discreta, (40-100) kg, Saltos: 0.50, Color: Rojo
-																							</span>
-																						</div>
-																					</div>
-																					<div class="form-group m-form__group m-form__group--sm row">
-																						<label class="col-xl-4 col-lg-4 col-form-label">
-																							Variable 3:
-																						</label>
-																						<div class="col-xl-8 col-lg-8">
-																							<span class="m-form__control-static">
-																								Edad, Discreta, (30-95) años, Saltos: 1, Color: Verde
 																							</span>
 																						</div>
 																					</div>
@@ -1639,7 +1611,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																							Tipo de solución:
 																						</label>
 																						<div class="col-xl-8 col-lg-8">
-																							<span class="m-form__control-static">
+																							<span id="tipoSolucionconf" class="m-form__control-static">
 																								Solucíon estandar
 																							</span>
 																						</div>
@@ -1658,7 +1630,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																						</label>
 																						<div class="col-xl-8 col-lg-8">
 																							<span id="funcionFitnessconf" class="m-form__control-static">
-																								
+																								-
 																							</span>
 																						</div>
 																					</div>
@@ -2486,6 +2458,89 @@ License: You must have a valid license purchased only from themeforest(the above
 		    }
 
 		</script>
+
+        <script>
+            $("input[name='demo1']").TouchSpin({
+                min: 0,
+                max: 100,
+                step: 0.1,
+                decimals: 2,
+                boostat: 5,
+                maxboostedstep: 10
+            });
+            $("input[name='demo2']").TouchSpin({
+                min: 0,
+                max: 100,
+                step: 0.1,
+                decimals: 2,
+                boostat: 5,
+                maxboostedstep: 10
+            });
+            $("input[name='demo3']").TouchSpin({
+                min: 0,
+                max: 100,
+                step: 0.1,
+                decimals: 2,
+                boostat: 5,
+                maxboostedstep: 10
+            });
+            $("input[name='demo4']").TouchSpin({
+                min: 0,
+                max: 100,
+                step: 0.1,
+                decimals: 2,
+                boostat: 5,
+                maxboostedstep: 10
+            });
+            $("input[name='demo5']").TouchSpin({
+                min: 0,
+                max: 100,
+                step: 0.1,
+                decimals: 2,
+                boostat: 5,
+                maxboostedstep: 10
+            });
+            $("input[name='demo6']").TouchSpin({
+                min: 0,
+                max: 100,
+                step: 0.1,
+                decimals: 2,
+                boostat: 5,
+                maxboostedstep: 10
+            });  
+            $("input[name='demo7']").TouchSpin({
+                min: 0,
+                max: 100,
+                step: 0.1,
+                decimals: 2,
+                boostat: 5,
+                maxboostedstep: 10
+            });
+            $("input[name='demo8']").TouchSpin({
+                min: 0,
+                max: 100,
+                step: 0.1,
+                decimals: 2,
+                boostat: 5,
+                maxboostedstep: 10
+            });
+            $("input[name='demo9']").TouchSpin({
+                min: 0,
+                max: 100,
+                step: 0.1,
+                decimals: 2,
+                boostat: 5,
+                maxboostedstep: 10
+            });
+            $("input[name='demo10']").TouchSpin({
+                min: 0,
+                max: 100,
+                step: 0.1,
+                decimals: 2,
+                boostat: 5,
+                maxboostedstep: 10
+            });
+        </script>
 		<!--end::Page Resources -->
 	</body>
 	<!-- end::Body -->
