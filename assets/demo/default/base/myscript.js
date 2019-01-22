@@ -64,8 +64,7 @@ function contenidoVariablesConfirmacion(){
 
 }
 
-function buscarSolucion(event){
-	event.preventDefault();
+function buscarSolucion(){
 	//clases para boton submit 
 	//btn btn-primary m-btn m-btn--custom m-btn--icon m-loader m-loader--light m-loader--right m-loader--
 	//btn btn-primary m-btn m-btn--custom m-btn--icon
