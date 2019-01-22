@@ -63,3 +63,13 @@ function contenidoVariablesConfirmacion(){
 	document.getElementById('detalle-variables').innerHTML = texto1 + texto3;
 
 }
+
+function buscarSolucion(event){
+	event.preventDefault();
+	//clases para boton submit 
+	//btn btn-primary m-btn m-btn--custom m-btn--icon m-loader m-loader--light m-loader--right m-loader--
+	//btn btn-primary m-btn m-btn--custom m-btn--icon
+	var submitItem = $('#submitItem');
+	submitItem.addClass('m-loader m-loader--light m-loader--right m-loader--');
+	console.log(document.getElementById('variable1nombre').value);
+}
