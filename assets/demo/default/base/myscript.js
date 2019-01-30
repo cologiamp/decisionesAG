@@ -214,14 +214,51 @@ function buscarSolucion(){
 	console.log(accept);
 
 	$.ajax({
-	url: 'https://localhost:8080/ApiRestRomper/solucion2/wizard-1.html?descripcion='+descripcion+'&variable1nombre='+variable1nombre+'&variable1rangomin='+variable1rangomin+'&variable1rangomax='+variable1rangomax+'&demo1='+demo1+'&variable1color='+variable1color+'&variable2nombre='+variable2nombre+'&variable2rangomin='+variable2rangomin+'&variable2rangomax='+variable2rangomax+'&demo2='+demo2+'&variable2color='+variable2color+'&variable3nombre='+variable3nombre+'&variable3rangomin='+variable3rangomin+'&variable3rangomax='+variable3rangomax+'&demo3='+demo3+'&variable3color='+variable3color+'&variable4nombre='+variable4nombre+'&variable4rangomin='+variable4rangomin+'&variable4rangomax='+variable4rangomax+'&demo4='+demo4+'&variable4color='+variable4color+'&variable5nombre='+variable5nombre+'&variable5rangomin='+variable5rangomin+'&variable5rangomax='+variable5rangomax+'&demo5='+demo5+'&variable5color='+variable5color+'&variable6nombre='+variable6nombre+'&variable6rangomin='+variable6rangomin+'&variable6rangomax='+variable6rangomax+'&demo6='+demo6+'&variable6color='+variable6color+'&variable7nombre='+variable7nombre+'&variable7rangomin='+variable7rangomin+'&variable7rangomax='+variable7rangomax+'&demo7='+demo7+'&variable7color='+variable7color+'&variable8nombre='+variable8nombre+'&variable8rangomin='+variable8rangomin+'&variable8rangomax='+variable8rangomax+'&demo8='+demo8+'&variable8color='+variable8color+'&variable9nombre='+variable9nombre+'&variable9rangomin='+variable9rangomin+'&variable9rangomax='+variable9rangomax+'&demo9='+demo9+'&variable9color='+variable9color+'&variable10nombre='+variable10nombre+'&variable10rangomin='+variable10rangomin+'&variable10rangomax='+variable10rangomax+'&demo10='+demo10+'&variable10color='+variable10color+'&islas='+islas+'&iteraciones='+iteraciones+'&tipoSolucion='+tipoSolucion+'&variablesAct='+variablesAct+'&accept='+accept,
+	url: 'http://localhost:8080/ApiRestRomper/solucion2/wizard-1.html?descripcion='+descripcion+'&variable1nombre='+variable1nombre+'&variable1rangomin='+variable1rangomin+'&variable1rangomax='+variable1rangomax+'&demo1='+demo1+'&variable1color='+variable1color+'&variable2nombre='+variable2nombre+'&variable2rangomin='+variable2rangomin+'&variable2rangomax='+variable2rangomax+'&demo2='+demo2+'&variable2color='+variable2color+'&variable3nombre='+variable3nombre+'&variable3rangomin='+variable3rangomin+'&variable3rangomax='+variable3rangomax+'&demo3='+demo3+'&variable3color='+variable3color+'&variable4nombre='+variable4nombre+'&variable4rangomin='+variable4rangomin+'&variable4rangomax='+variable4rangomax+'&demo4='+demo4+'&variable4color='+variable4color+'&variable5nombre='+variable5nombre+'&variable5rangomin='+variable5rangomin+'&variable5rangomax='+variable5rangomax+'&demo5='+demo5+'&variable5color='+variable5color+'&variable6nombre='+variable6nombre+'&variable6rangomin='+variable6rangomin+'&variable6rangomax='+variable6rangomax+'&demo6='+demo6+'&variable6color='+variable6color+'&variable7nombre='+variable7nombre+'&variable7rangomin='+variable7rangomin+'&variable7rangomax='+variable7rangomax+'&demo7='+demo7+'&variable7color='+variable7color+'&variable8nombre='+variable8nombre+'&variable8rangomin='+variable8rangomin+'&variable8rangomax='+variable8rangomax+'&demo8='+demo8+'&variable8color='+variable8color+'&variable9nombre='+variable9nombre+'&variable9rangomin='+variable9rangomin+'&variable9rangomax='+variable9rangomax+'&demo9='+demo9+'&variable9color='+variable9color+'&variable10nombre='+variable10nombre+'&variable10rangomin='+variable10rangomin+'&variable10rangomax='+variable10rangomax+'&demo10='+demo10+'&variable10color='+variable10color+'&islas='+islas+'&iteraciones='+iteraciones+'&tipoSolucion='+tipoSolucion+'&variablesAct='+variablesAct+'&accept='+accept,
 	success: function(respuesta) {
 		console.log(respuesta);
 	},
-	error: function() {
+	error: function( jqXHR, textStatus, errorThrown ) {
+
+      if (jqXHR.status === 0) {
+
+        alert('Not connect: Verify Network.');
+
+      } else if (jqXHR.status == 404) {
+
+        alert('Requested page not found [404]');
+
+      } else if (jqXHR.status == 500) {
+
+        alert('Internal Server Error [500].');
+
+      } else if (textStatus === 'parsererror') {
+
+        alert('Requested JSON parse failed.');
+
+      } else if (textStatus === 'timeout') {
+
+        alert('Time out error.');
+
+      } else if (textStatus === 'abort') {
+
+        alert('Ajax request aborted.');
+
+      } else {
+
+        alert('Uncaught Error: ' + jqXHR.responseText);
+
+      }
+
+    }
+    /*
+	error: function(xhr, status, error) {
+		var err = eval("(" + xhr.responseText + ")");
+  		alert(err.Message);
 		submitItem.removeClass('m-loader m-loader--light m-loader--right m-loader--');
         console.log("No se ha podido obtener la información");
     }
+    */
 });
 
 }

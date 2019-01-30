@@ -2885,35 +2885,6 @@
   ze = S.ajaxSettings.xhr();
  v.cors = !!ze && "withCredentials" in ze, v.ajax = ze = !!ze, S.ajaxTransport(function(r) {
   var o, s;
-  if (v.cors || ze && !r.crossDomain) return {
-   send: function(t, e) {
-    var i, n = r.xhr();
-    if (n.open(r.type, r.url, r.async, r.username, r.password), r.xhrFields)
-     for (i in r.xhrFields) n[i] = r.xhrFields[i];
-    for (i in r.mimeType && n.overrideMimeType && n.overrideMimeType(r.mimeType), r.crossDomain || t["X-Requested-With"] || (t["X-Requested-With"] = "XMLHttpRequest"), t) n.setRequestHeader(i, t[i]);
-    o = function(t) {
-     return function() {
-      o && (o = s = n.onload = n.onerror = n.onabort = n.ontimeout = n.onreadystatechange = null, "abort" === t ? n.abort() : "error" === t ? "number" != typeof n.status ? e(0, "error") : e(n.status, n.statusText) : e(He[n.status] || n.status, n.statusText, "text" !== (n.responseType || "text") || "string" != typeof n.responseText ? {
-       binary: n.response
-      } : {
-       text: n.responseText
-      }, n.getAllResponseHeaders()))
-     }
-    }, n.onload = o(), s = n.onerror = n.ontimeout = o("error"), void 0 !== n.onabort ? n.onabort = s : n.onreadystatechange = function() {
-     4 === n.readyState && k.setTimeout(function() {
-      o && s()
-     })
-    }, o = o("abort");
-    try {
-     n.send(r.hasContent && r.data || null)
-    } catch (t) {
-     if (o) throw t
-    }
-   },
-   abort: function() {
-    o && o()
-   }
-  }
  }), S.ajaxPrefilter(function(t) {
   t.crossDomain && (t.contents.script = !1)
  }), S.ajaxSetup({
@@ -2932,19 +2903,6 @@
   void 0 === t.cache && (t.cache = !1), t.crossDomain && (t.type = "GET")
  }), S.ajaxTransport("script", function(i) {
   var n, r;
-  if (i.crossDomain) return {
-   send: function(t, e) {
-    n = S("<script>").prop({
-     charset: i.scriptCharset,
-     src: i.url
-    }).on("load error", r = function(t) {
-     n.remove(), r = null, t && e("error" === t.type ? 404 : 200, t.type)
-    }), C.head.appendChild(n[0])
-   },
-   abort: function() {
-    r && r()
-   }
-  }
  });
  var Ue, We = [],
   Ye = /(=)\?(?=&|$)|\?\?/;
