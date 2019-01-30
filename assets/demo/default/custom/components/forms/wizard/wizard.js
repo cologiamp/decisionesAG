@@ -115,17 +115,7 @@ var WizardDemo = function() {
     submitHandler: function(e) {}
    }), (r = n.find('[data-wizard-action="submit"]')).on("click", function(e) {
     //e.preventDefault(),
-    i.form() && (mApp.progress(r), n.ajaxSubmit({
-     success: function() {
-      mApp.unprogress(r), swal({
-       title: "",
-       text: "El formulario ha sido enviado con exito!",
-       type: "success",
-       confirmButtonClass: "btn btn-secondary m-btn m-btn--wide"
-      })
-     }
-    }))
-   })
+  })
   }
  }
 }();
