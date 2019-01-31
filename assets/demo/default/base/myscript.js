@@ -12,8 +12,9 @@ function contenidoConfirmacion(elemento){
 	}
 	if(elemento.id=="m_maxlength_3"){
 		document.getElementById('descripcionconf').innerHTML = elemento.value;
+	}else{
+		document.getElementById(elemento.id+'conf').innerHTML = elemento.value;
 	}
-	document.getElementById(elemento.id+'conf').innerHTML = elemento.value;
 }
 
 function contenidoVariablesConfirmacion(){
