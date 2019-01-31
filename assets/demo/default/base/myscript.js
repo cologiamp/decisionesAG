@@ -129,70 +129,90 @@ function buscarSolucion(){
 	var variable1rangomin = document.getElementById('variable1rangomin').value;
 	var variable1rangomax = document.getElementById('variable1rangomax').value;
 	var demo1 = document.getElementById('variable1saltos').value;
-	var variable1color = document.getElementById('variable1color').value;
+	var variable1colorGet = document.getElementById('variable1color').value;
+	variable1colorGet = variable1colorGet.split("#");
+	variable1color = variable1colorGet[1];
 
 	var variable2nombre = document.getElementById('variable2nombre').value;
 	var variabla2tipo = $('#variable2tipo').bootstrapSwitch('state');
 	var variable2rangomin = document.getElementById('variable2rangomin').value;
 	var variable2rangomax = document.getElementById('variable2rangomax').value;
 	var demo2 = document.getElementById('variable2saltos').value;
-	var variable2color = document.getElementById('variable2color').value;
+	var variable2colorGet = document.getElementById('variable2color').value;
+	variable2colorGet = variable2colorGet.split("#");
+	variable2color = variable2colorGet[1];
 
 	var variable3nombre = document.getElementById('variable3nombre').value;
 	var variabla3tipo = $('#variable3tipo').bootstrapSwitch('state');
 	var variable3rangomin = document.getElementById('variable3rangomin').value;
 	var variable3rangomax = document.getElementById('variable3rangomax').value;
 	var demo3 = document.getElementById('variable3saltos').value;
-	var variable3color = document.getElementById('variable3color').value;
+	var variable3colorGet = document.getElementById('variable3color').value;
+	variable3colorGet = variable3colorGet.split("#");
+	variable3color = variable3colorGet[1];
 
 	var variable4nombre = document.getElementById('variable4nombre').value;
 	var variabla4tipo = $('#variable4tipo').bootstrapSwitch('state');
 	var variable4rangomin = document.getElementById('variable4rangomin').value;
 	var variable4rangomax = document.getElementById('variable4rangomax').value;
 	var demo4 = document.getElementById('variable4saltos').value;
-	var variable4color = document.getElementById('variable4color').value;
+	var variable4colorGet = document.getElementById('variable4color').value;
+	variable4colorGet = variable4colorGet.split("#");
+	variable4color = variable4colorGet[1];
 
 	var variable5nombre = document.getElementById('variable5nombre').value;
 	var variabla5tipo = $('#variable5tipo').bootstrapSwitch('state');
 	var variable5rangomin = document.getElementById('variable5rangomin').value;
 	var variable5rangomax = document.getElementById('variable5rangomax').value;
 	var demo5 = document.getElementById('variable5saltos').value;
-	var variable5color = document.getElementById('variable5color').value;
+	var variable5colorGet = document.getElementById('variable5color').value;
+	variable5colorGet = variable5colorGet.split("#");
+	variable5color = variable5colorGet[1];
 	
 	var variable6nombre = document.getElementById('variable6nombre').value;
 	var variabla6tipo = $('#variable6tipo').bootstrapSwitch('state');
 	var variable6rangomin = document.getElementById('variable6rangomin').value;
 	var variable6rangomax = document.getElementById('variable6rangomax').value;
 	var demo6 = document.getElementById('variable6saltos').value;
-	var variable6color = document.getElementById('variable6color').value;
+	var variable6colorGet = document.getElementById('variable6color').value;
+	variable6colorGet = variable6colorGet.split("#");
+	variable6color = variable6colorGet[1];
 
 	var variable7nombre = document.getElementById('variable7nombre').value;
 	var variabla7tipo = $('#variable7tipo').bootstrapSwitch('state');
 	var variable7rangomin = document.getElementById('variable7rangomin').value;
 	var variable7rangomax = document.getElementById('variable7rangomax').value;
 	var demo7 = document.getElementById('variable7saltos').value;
-	var variable7color = document.getElementById('variable7color').value;
+	var variable7colorGet = document.getElementById('variable7color').value;
+	variable7colorGet = variable7colorGet.split("#");
+	variable7color = variable7colorGet[1];
 
 	var variable8nombre = document.getElementById('variable8nombre').value;
 	var variabla8tipo = $('#variable8tipo').bootstrapSwitch('state');
 	var variable8rangomin = document.getElementById('variable8rangomin').value;
 	var variable8rangomax = document.getElementById('variable8rangomax').value;
 	var demo8 = document.getElementById('variable8saltos').value;
-	var variable8color = document.getElementById('variable8color').value;
+	var variable8colorGet = document.getElementById('variable8color').value;
+	variable8colorGet = variable8colorGet.split("#");
+	variable8color = variable8colorGet[1];
 
 	var variable9nombre = document.getElementById('variable9nombre').value;
 	var variabla9tipo = $('#variable9tipo').bootstrapSwitch('state');
 	var variable9rangomin = document.getElementById('variable9rangomin').value;
 	var variable9rangomax = document.getElementById('variable9rangomax').value;
 	var demo9 = document.getElementById('variable9saltos').value;
-	var variable9color = document.getElementById('variable9color').value;
+	var variable9colorGet = document.getElementById('variable9color').value;
+	variable9colorGet = variable9colorGet.split("#");
+	variable9color = variable9colorGet[1];
 
 	var variable10nombre = document.getElementById('variable10nombre').value;
 	var variabla10tipo = $('#variable10tipo').bootstrapSwitch('state');
 	var variable10rangomin = document.getElementById('variable10rangomin').value;
 	var variable10rangomax = document.getElementById('variable10rangomax').value;
 	var demo10 = document.getElementById('variable10saltos').value;
-	var variable10color = document.getElementById('variable10color').value;
+	var variable10colorGet = document.getElementById('variable10color').value;
+	variable10colorGet = variable10colorGet.split("#");
+	variable10color = variable10colorGet[1];
 
 	var accept = document.getElementById('accept').value;
 	var islas = document.getElementById('cantidadIslas').value;
