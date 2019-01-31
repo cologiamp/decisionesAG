@@ -121,7 +121,7 @@ function buscarSolucion(){
 			//FIN ASIGNACION DE DATOS
 		}
 	}
-	var descripcion = document.getElementById('descripcion').value;
+	var descripcion = document.getElementById('m_maxlength_3').value;
 
 
 	var variable1nombre = document.getElementById('variable1nombre').value;
