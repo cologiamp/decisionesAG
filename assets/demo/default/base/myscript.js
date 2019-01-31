@@ -10,8 +10,8 @@ function contenidoConfirmacion(elemento){
 	if(elemento.id=="cantidadIslas"){
 		document.getElementById(elemento.id+'conf').innerHTML = elemento.value;
 	}
-	if(elemento.id=="descripcion"){
-		document.getElementById(elemento.id+'conf').innerHTML = elemento.value;
+	if(elemento.id=="m_maxlength_3"){
+		document.getElementById('descripcionconf').innerHTML = elemento.value;
 	}
 	document.getElementById(elemento.id+'conf').innerHTML = elemento.value;
 }
